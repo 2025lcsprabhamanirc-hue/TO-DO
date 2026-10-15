@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskBloom - My Tasks</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>TaskBloom</h1>
+        <p class="subtitle">Organize your day, one task at a time.</p>
+
+        <form id="task-form">
+            <input
+                type="text"
+                id="task-title"
+                placeholder="Enter a new task..."
+                maxlength="280"
+                required
+            >
+
+            <input
+                type="date"
+                id="task-due-date"
+                required
+            >
+
+            <button type="submit">Add Task</button>
+        </form>
+
+        <p id="message" role="status"></p>
+
+        <div class="task-heading">
+            <h2>My Tasks</h2>
+            <span id="task-count">0 tasks</span>
+        </div>
+
+        <div class="summary">
+            <div class="summary-card">
+                <span>Pending</span>
+                <h3 id="pending-count">0</h3>
+            </div>
+
+            <div class="summary-card">
+                <span>Completed</span>
+                <h3 id="completed-count">0</h3>
+            </div>
+        </div>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
